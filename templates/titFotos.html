@@ -1,0 +1,12 @@
+<h1>Fotos de Sevilla</h1>
+<table>
+{% for items in arcompleto %}
+	{% for item in items %}
+		{% if 'https' in item %}
+		<img align="left" src="{{ item }}" style="max-width: 50%; height: auto;">
+		{% else %}
+		<div style="height: 85%;">{{ item }}</div>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+</table>
